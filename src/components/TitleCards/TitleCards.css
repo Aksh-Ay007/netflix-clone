@@ -1,0 +1,189 @@
+/* Title Cards Section */
+.title-cards {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.title-cards h2 {
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Card List */
+.card-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll; /* Horizontal scrolling */
+    padding: 20px; /* Add some padding to make it look nicer */
+}
+
+.card-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.card-list img {
+    width: 240px;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    object-fit: cover; /* Ensures images maintain their aspect ratio */
+}
+
+.card-list .card {
+    position: relative;
+}
+
+.card-list .card p {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.6); /* Add background for better readability */
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+}
+
+.banner-img {
+    width: 100%;
+    object-fit: cover; /* Ensure the image covers the area and scales proportionally */
+    height: auto; /* Scale height proportionally */
+    mask-image: linear-gradient(to right, transparent, black 75%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
+}
+
+.hero-caption {
+    position: absolute;
+    width: 100%;
+    padding: 5%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Keep caption aligned at the bottom */
+}
+
+.caption-img {
+    width: 90%;
+    max-width: 420px;
+    margin-bottom: 0;
+}
+
+.hero-caption p {
+    max-width: 700px;
+    font-size: 17px;
+    margin-bottom: 3px;
+    color: #fff; /* Ensure the text color contrasts well with the background */
+}
+
+.hero-btns {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.hero-btns .btn {
+    border: 0;
+    outline: 0;
+    padding: 8px 15px; /* Adjust padding for better spacing */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btns .btn img {
+    width: 25px;
+}
+
+.hero-btns .btn.dark-btn {
+    color: #fff;
+    background: #6d6d6eb3; /* Dark background for the secondary button */
+}
+
+.hero-btns .btn:hover {
+    background: #ffffffbf;
+}
+
+.hero-btns .btn.dark-btn:hover {
+    background: #6d6d6e66;
+}
+
+.more-cards {
+    padding-left: 6px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .title-cards h2 {
+        font-size: 20px; /* Adjust title size */
+    }
+
+    .card-list img {
+        width: 180px; /* Smaller card images */
+    }
+
+    .hero-caption p {
+        font-size: 15px; /* Adjust font size for better readability */
+    }
+
+    .hero-btns .btn {
+        font-size: 14px; /* Smaller buttons */
+        padding: 6px 12px; /* Adjust padding for smaller screens */
+    }
+
+    .hero-btns {
+        gap: 8px; /* Reduce gap between buttons */
+    }
+}
+
+/* For Mobile Devices (max-width: 500px) */
+@media (max-width: 500px) {
+    .title-cards {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .title-cards h2 {
+        font-size: 18px; /* Further reduce the font size for mobile */
+    }
+
+    .card-list {
+        gap: 8px; /* Narrow the gap between cards */
+    }
+
+    .card-list img {
+        width: 150px; /* Smaller card images for mobile */
+    }
+
+    .hero-caption {
+        padding: 3%;
+    }
+
+    .hero-caption p {
+        font-size: 14px; /* Reduce text size */
+        max-width: 100%; /* Allow text to wrap */
+    }
+
+    .hero-btns {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 6px;
+    }
+
+    .hero-btns .btn {
+        font-size: 13px; /* Smaller buttons */
+        padding: 5px 10px;
+    }
+}
